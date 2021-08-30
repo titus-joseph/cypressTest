@@ -10,5 +10,4 @@ Steps to Run the test
 7. once the execution is finished , please execute this command too "node .\cucumber-html-report.js"  ( This is to  generate the Cucumber html report , which will be available in  CypressAutomation/reports/cucumber-htmlreport.html/index.html  folder) 
 
 Issues indentifed in the test : https://github.com/titus-joseph/cypressTest/issues/1
-
-Presentaion for the test : https://1drv.ms/u/s!AresRhVEbwpUhhYTHGHX21oAXZ5W?e=fbeaNh
+Presentaion document for the test can be found here  :https://1drv.ms/u/s!AresRhVEbwpUhhYTHGHX21oAXZ5W?e=x7HtbN
