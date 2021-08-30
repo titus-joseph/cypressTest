@@ -14,7 +14,7 @@ Feature: End to end Student discount test
 
      
    @Regression
-    Scenario:  purchase an item with student discount of 15% (already received a discount coupon)
+    Scenario:  purchase an item with student discount of 15% (already received a discount coupon.)
     Given I open asos.com and login with valid credentials
     When  I select  2 items and add to cart 
     Then validate that cart contains added items 
