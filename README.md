@@ -1,4 +1,5 @@
 # AsosStudentDiscount
+This is a Cucumber Cypress Framework Created for ASOS Student discount Feature Test 
 Steps to Run the test 
 1. Install node  in your machine from   https://nodejs.org/en/   
 2. verify the node is installed by executing  'node' in the command prompt 
