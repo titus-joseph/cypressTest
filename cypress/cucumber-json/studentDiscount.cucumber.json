@@ -1,0 +1,153 @@
+[
+  {
+    "description": "    application Regression",
+    "keyword": "Feature",
+    "name": "End to end Student discount test",
+    "line": 1,
+    "id": "end-to-end-student-discount-test",
+    "tags": [],
+    "uri": "studentdiscount.feature",
+    "elements": [
+      {
+        "id": "end-to-end-student-discount-test;register-for-student-discount-voucher-code-and-login-purchase-an-item",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Register for student discount voucher code and login purchase an item",
+        "tags": [
+          {
+            "name": "@Regression",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open student discount Page",
+            "result": {
+              "status": "passed",
+              "duration": 23220000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I fill in the required details",
+            "result": {
+              "status": "passed",
+              "duration": 6963000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "validate email verification message",
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I Select Shop women and validate women shopping page url",
+            "result": {
+              "status": "passed",
+              "duration": 7880000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I select Destination Denim and items to cart",
+            "result": {
+              "status": "passed",
+              "duration": 87305000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "end-to-end-student-discount-test;purchase-an-item-with-student-discount-of-15%-(already-received-a-discount-coupon)",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "purchase an item with student discount of 15% (already received a discount coupon)",
+        "tags": [
+          {
+            "name": "@Regression",
+            "line": 16
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I open asos.com and login with valid credentials",
+            "result": {
+              "status": "passed",
+              "duration": 12628000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I select  2 items and add to cart",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "validate that cart contains added items",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I select checkout and enter student discount code",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "validate that 15% discount is applied on the total price",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "click on pay and validate that discounted amount is displayed payment page",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

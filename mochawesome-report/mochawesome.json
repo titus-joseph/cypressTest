@@ -1,0 +1,117 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-30T20:10:08.329Z",
+    "end": "2021-08-30T20:12:36.890Z",
+    "duration": 148561,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e371fd1f-fc44-4a3b-b449-46bde21a5e00",
+      "title": "",
+      "fullFile": "cypress/integration/examples/BDD/studentdiscount.feature",
+      "file": "cypress/integration/examples/BDD/studentdiscount.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f34d588b-96fd-4b17-85c4-997bacbcb60a",
+          "title": "End to end Student discount test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register for student discount voucher code and login purchase an item",
+              "fullTitle": "End to end Student discount test Register for student discount voucher code and login purchase an item",
+              "timedOut": null,
+              "duration": 125345,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "9a480afe-191e-4e36-9038-85785d35ec99",
+              "parentUUID": "f34d588b-96fd-4b17-85c4-997bacbcb60a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "purchase an item with student discount of 15% (already received a discount coupon)",
+              "fullTitle": "End to end Student discount test purchase an item with student discount of 15% (already received a discount coupon)",
+              "timedOut": null,
+              "duration": 12370,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "d76c35de-a322-4d78-ac4c-b03520edab7a",
+              "parentUUID": "f34d588b-96fd-4b17-85c4-997bacbcb60a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9a480afe-191e-4e36-9038-85785d35ec99",
+            "d76c35de-a322-4d78-ac4c-b03520edab7a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 137715,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "useInlineDiffs": false
+      },
+      "version": "4.0.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "4.0.1"
+    }
+  }
+}
