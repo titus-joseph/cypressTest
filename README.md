@@ -9,7 +9,8 @@ This is a Cucumber Cypress Framework using Page Object design  Created for Testi
 5. In the terminal execute this command  **```npm install cypress```**
 6. Once installation completed, please run the  command the execute the test\
  **```npx cypress run --spec cypress\integration\examples\BDD\*.feature --headed --browser chrome```** (To execute all the feature files in the project, this can be used for CI/CD integration).
- if we want to execute test based on tag\ **```npx cypress-tags run -e TAGS="@Regression" --headed --browser chrome```**
+ if we want to execute test based on tag\
+ **```npx cypress-tags run -e TAGS="@Regression" --headed --browser chrome```**
 7. once the execution is finished , please execute this command too\ **```node .\cucumber-html-report.js```** ( This is to  generate the Cucumber html report , which will be  available in  CypressAutomation/reports/cucumber-htmlreport.html/index.html)\
 
  
