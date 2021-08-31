@@ -13,7 +13,7 @@ This is a Cucumber Cypress Framework using Page Object design  Created for Testi
 7. once the execution is finished , please execute this command too **```node .\cucumber-html-report.js```** ( This is to  generate the Cucumber html report , which will be  available in  CypressAutomation/reports/cucumber-htmlreport.html/index.html)
 
  
-Video of execution   : 1. https://www.awesomescreenshot.com/video/5048908?key=18cc0f8ad61513b1270039405acd6ebe\
+Video of execution   : 1. https://www.awesomescreenshot.com/video/5048908?key=18cc0f8ad61513b1270039405acd6ebe
 
  2. https://www.awesomescreenshot.com/video/5035427?key=a2a4d6d5e6554c97c22e5f4458962b95
 
