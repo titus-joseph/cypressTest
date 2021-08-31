@@ -37,6 +37,22 @@ class WomensProductPage{
     selectGoingOutItem(){
         return cy.get('.ERlP6Bx')
     }
+    selectWomenshopping(){
+       return cy.get('[href="/women/new-in/cat/?cid=27108&ctaref=15offnewcustomer|globalbanner|ww"]')
+    }
+
+
+    searchforitem(){
+        return cy.get('[data-testid=search-input]')
+
+      
+    }
+    buttonSearch(){
+        return   cy.get('[data-testid=search-button-inline] > svg')
+    }
+    firstitem_1(){
+        return cy.get('._3TqU78D')
+    }
 }
 export default WomensProductPage;
 

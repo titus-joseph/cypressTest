@@ -7,8 +7,8 @@ Feature: End to end Student discount test
      When  I fill in the required details
      Then  validate email verification message 
      Then I Select Shop women and validate women shopping page url
-     Then I select Destination Denim and items to cart
-     #Then enter credentials and login to application 
+     Then I Search for Denim ,select items and add to cart
+     Then enter credentials and login to application 
      #Then click on checkout and apply student discount promotional code 
      #Then Validate that 15% discount is applied on total price 
 
@@ -22,6 +22,12 @@ Feature: End to end Student discount test
     Then validate that 15% discount is applied on the total price
     Then click on pay and validate that discounted amount is displayed payment page 
 
-     
+     @sanity
+     Scenario: Verify error messages on the student discount page with out entering any data for registration
+     Given I open student discount Page
+     When I submit the form without any data entered
+     Then I validate the error message mandatory fields not filled 
+     When I enter the details in mandatory fileds 
+     Then The error messges should be removed 
 
    

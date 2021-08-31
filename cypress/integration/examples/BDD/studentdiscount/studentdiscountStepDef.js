@@ -50,34 +50,36 @@ Then('I Select Shop women and validate women shopping page url',function(){
     studentValidation.shopWomen().click()
     cy.url().should('include', 'ShopWomen')
 }) 
+Then('I Search for Denim ,select items and add to cart',function(){
+   // womenProduct.selectWomenshopping().click()
+    womenProduct.searchforitem().type('Denim')
+    womenProduct.buttonSearch().click()
+    womenProduct.firstitem_1().eq(0).click()
 
+    womenProduct.selectsize().should('be.visible')
 
-Then('I select Destination Denim and items to cart',function(){
-    cy.get('[href="/women/new-in/cat/?cid=27108&ctaref=15offnewcustomer|globalbanner|ww"]').click()
-     studentValidation.selectDenim().eq(0).click()
-    // womenProduct.firstitem().eq(3).click()
-    //new addition 
-
-    cy.get("body").then($body => {
-        if ($body.find(".product-out-of-stock-label").length > 0) {  
-             //evaluates as true
-            cy.get('[href="/women/new-in/cat/?cid=27108&ctaref=15offnewcustomer|globalbanner|ww"]')
-            .click();
-            studentValidation.selectDenim().eq(4).click()
+    womenProduct.selectsize().then((size)=>{
+        if(size.is("disabled"))
+        {
+             womenProduct.addToCart().click()  
         }
-    });
-
-
-// old 
-     const regEXp=new RegExp('^(?!\Please)')
+        else
+         {
+    const regEXp=new RegExp('^(?!\Please)')
      womenProduct.selectsize().contains(regEXp)
      .then(element => {
      var text = element.text();
-     womenProduct.selectsize().select(text);
-    });
+     womenProduct.selectsize().select(text)
+     womenProduct.addToCart().click() 
+               });
+        }
 
-    womenProduct.addToCart().click()
+    })
+
     womenProduct.checkout().click()
+})
+
+Then('enter credentials and login to application',function(){
     loginpage.emailid().type(this.data.email1)
     loginpage.password().type(this.data.password1)
     loginpage.signinButton().click()
@@ -90,15 +92,68 @@ Then('I select Destination Denim and items to cart',function(){
          expect(profilename.includes(this.data.name1)).to.be.true
     })
 
-    womenProduct.selectGoingout().eq(0).click()
-     womenProduct.firstitem().eq(2).click()
+womenProduct.searchforitem().scrollIntoView().type('Denim')
+womenProduct.buttonSearch().click()
+womenProduct.firstitem_1().eq(0).click()
 
+womenProduct.selectsize().then((x)=>{
+    if(x.is("disabled"))
+    {
+         womenProduct.addToCart().click()  
+    }
+    else
+     {
+        const regEXp=new RegExp('^(?!\Please)')
+ womenProduct.selectsize().contains(regEXp)
+ .then(element => {
+ var text = element.text();
+ womenProduct.selectsize().select(text);
+ womenProduct.addToCart().click() 
+           });
+    }
 
+})
+
+womenProduct.checkout().click()
+
+}) 
+
+When('I submit the form without any data entered',function(){
+    studentdis.submittButton().click()
+
+})
+
+Then('I validate the error message mandatory fields not filled',function(){
+    studentdis.firstNameError() .should('be.visible').should('contain','Please enter your first name');
+    studentdis.emailidError().should('be.visible').should('contain','Please enter a valid email address');
+    studentdis.studentemailidError('be.visible').should('contain','Please enter a valid email address');
+    studentdis.graduationYearerror().should('be.visible').should('contain','Please select which year you will graduate in');
+    studentdis.selectIntrestedin().should('be.visible').should('contain','Please select an option');
+
+    
+
+})
+
+When('I enter the details in mandatory fileds',function(){
+    studentdis.enterfirstname().type(this.data.name1)
+    studentdis.entersecondname().type(this.data.surname1)
+    studentdis.studentCountry().select(this.data.country) .should('have.value', 'AU')
+    studentdis.registeredEmailid().type(this.data.email1)
+    studentdis.studentEmailid().type(this.data.studentEmailid)
+    studentdis.graduationYear23().click()
+    studentdis.intrestedinWomenswear().click()
+} )
+Then('The error messges should be removed',function(){
+    studentdis.firstNameError() .should('not.be.visible')
+    studentdis.emailidError().should('not.be.visible')
+    studentdis.studentemailidError('not.be.visible')
+    studentdis.graduationYearerror().should('not.be.visible')
+    studentdis.selectIntrestedin().should('not.be.visible')
 })
 
 
 
-Given('I open asos.com and login with valid credentials',()=>
+Given('I open asos.com and login with valid credentials',function()
 {
     cy.visit(Cypress.env('url2'))
    
@@ -128,71 +183,7 @@ Then('validate that 15% discount is applied on the total price',()=>
 
 })
 Then('click on pay and validate that discounted amount is displayed payment page',()=>
-{}) 
+{
 
-
-//And Validate the total prices
-// And('Validate the total prices',()=>
-// {
-//     var sum=0
-//     cy.get('tr td:nth-child(4) strong').each(($el, index, $list) => {
-
-
-//         const amount=$el.text()
-//         var res= amount.split(" ")
-//        res= res[1].trim()
-//        sum= Number(sum)+Number(res)
-       
-//        }).then(function()
-//        {
-//            cy.log(sum)
-//        })
-//        cy.get('h3 strong').then(function(element)
-//        {
-//            const amount=element.text()
-//            var res= amount.split(" ")
-//           var total= res[1].trim()
-//           expect(Number(total)).to.equal(sum)
-       
-//        }) 
-//     })
-
-//     //Then select the country submit and verify Thankyou
-
-//     Then('select the country submit and verify Thankyou',()=>
-//     {
-//         cy.contains('Checkout').click()
-//         cy.get('#country').type('India')
-//         cy.get('.suggestions > ul > li > a').click()
-//         cy.get('#checkbox2').click({force: true})
-//         cy.get('input[type="submit"]').click()
-//         //cy.get('.alert').should('have.text','Success! Thank you! Your order will be delivered in next few weeks :-).')
-//         cy.get('.alert').then(function(element)
-//         {
-//            const actualText=element.text()
-//           expect(actualText.includes("Success")).to.be.true
-//         })
-//     })
-//     //When I fill the form details
-//     When('I fill the form details',function(dataTable)
-//     {
-
-//         // [bobz , male   ]
-//         name = dataTable.rawTable[1][0]
-//         homePage.getEditBox().type(dataTable.rawTable[1][0])
-//         homePage.getGender().select(dataTable.rawTable[1][1])
-//     })
-//     // Then validate the forms behaviour
-//     Then('validate the forms behaviour',function()
-//     {
-//     homePage.getTwoWayDataBinding().should('have.value',name)
-//     homePage.getEditBox().should('have.attr','minlength','2')
-//     homePage.getEntrepreneaur().should('be.disabled')
-//     Cypress.config('defaultCommandTimeout', 8000)
-//     })
-//     // And select the Shop Page
-//     And('select the Shop Page',()=>
-//     {
-//         homePage.getShopTab().click()
-//     })
+}) 
 

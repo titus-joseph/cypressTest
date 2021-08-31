@@ -44,6 +44,22 @@ class StuDiscountPage{
         return cy.get('#submitButton')
     }
 
+    firstNameError(){
+        return  cy.get('#firstName-error')
+    }
+   emailidError(){
+       return cy.get('#asosEmail-error')
+
+   }
+   studentemailidError(){
+       return  cy.get('#studentEmail-error')
+
+   }
+   graduationYearerror(){
+       return cy.get('#graduationYear-error')
+
+   }
+   selectIntrestedin(){ return  cy.get('#fashionGender-error')}
 }
 
 export default StuDiscountPage;

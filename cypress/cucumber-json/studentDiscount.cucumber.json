@@ -28,7 +28,7 @@
             "name": "I open student discount Page",
             "result": {
               "status": "passed",
-              "duration": 23220000000
+              "duration": 52312000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I fill in the required details",
             "result": {
               "status": "passed",
-              "duration": 6963000000
+              "duration": 12743000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "validate email verification message",
             "result": {
               "status": "passed",
-              "duration": 28000000
+              "duration": 125000000
             }
           },
           {
@@ -58,26 +58,36 @@
             "name": "I Select Shop women and validate women shopping page url",
             "result": {
               "status": "passed",
-              "duration": 7880000000
+              "duration": 6963000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 10,
-            "name": "I select Destination Denim and items to cart",
+            "name": "I Search for Denim ,select items and add to cart",
             "result": {
               "status": "passed",
-              "duration": 87305000000
+              "duration": 41733000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "enter credentials and login to application",
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: Timed out retrying after 15000ms: Expected to find element: `#main-size-select-0`, but never found it.\n    at WomensProductPage.selectsize (https://www.asos.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\studentdiscount.feature:383:17)\n    at Context.eval (https://www.asos.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\studentdiscount.feature:127:16)\n    at Context.resolveAndRunStepDefinition (https://www.asos.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\studentdiscount.feature:12773:29)\n    at Context.eval (https://www.asos.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\studentdiscount.feature:12094:35)"
             }
           }
         ]
       },
       {
-        "id": "end-to-end-student-discount-test;purchase-an-item-with-student-discount-of-15%-(already-received-a-discount-coupon)",
+        "id": "end-to-end-student-discount-test;purchase-an-item-with-student-discount-of-15%-(already-received-a-discount-coupon.)",
         "keyword": "Scenario",
         "line": 17,
-        "name": "purchase an item with student discount of 15% (already received a discount coupon)",
+        "name": "purchase an item with student discount of 15% (already received a discount coupon.)",
         "tags": [
           {
             "name": "@Regression",
@@ -93,7 +103,7 @@
             "name": "I open asos.com and login with valid credentials",
             "result": {
               "status": "passed",
-              "duration": 12628000000
+              "duration": 27754000000
             }
           },
           {
@@ -103,7 +113,7 @@
             "name": "I select  2 items and add to cart",
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 10000000
             }
           },
           {
@@ -113,7 +123,7 @@
             "name": "validate that cart contains added items",
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 13000000
             }
           },
           {
@@ -123,7 +133,7 @@
             "name": "I select checkout and enter student discount code",
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 9000000
             }
           },
           {
@@ -133,7 +143,7 @@
             "name": "validate that 15% discount is applied on the total price",
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 7000000
             }
           },
           {
@@ -143,7 +153,72 @@
             "name": "click on pay and validate that discounted amount is displayed payment page",
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 5000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "end-to-end-student-discount-test;verify-error-messages-on-the-student-discount-page-with-out-entering-any-data-for-registration",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Verify error messages on the student discount page with out entering any data for registration",
+        "tags": [
+          {
+            "name": "@sanity",
+            "line": 25
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "I open student discount Page",
+            "result": {
+              "status": "passed",
+              "duration": 9084000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I submit the form without any data entered",
+            "result": {
+              "status": "passed",
+              "duration": 1634000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I validate the error message mandatory fields not filled",
+            "result": {
+              "status": "passed",
+              "duration": 1467000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I enter the details in mandatory fileds",
+            "result": {
+              "status": "passed",
+              "duration": 10939000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "The error messges should be removed",
+            "result": {
+              "status": "passed",
+              "duration": 787000000
             }
           }
         ]
