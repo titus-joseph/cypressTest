@@ -1,21 +1,18 @@
-class studentValidationPage
-{
-    emailvalidationText(){
-     return   cy.get('.confirm-page > .header > .container > .header__blurb > p')
+class studentValidationPage {
+    emailvalidationText() {
+        return cy.get('.confirm-page > .header > .container > .header__blurb > p')
     }
-    ShopMen(){
+    ShopMen() {
         return cy.get('[href="/men/?ctaref=Student|Confirmation|ShopMen"]')
     }
-    shopWomen(){
+    shopWomen() {
         return cy.get('[href="/women/?ctaref=Student|Confirmation|ShopWomen"]')
     }
-    
-    selectDenim()
-    {
-       return cy.get('._3TqU78D')
+
+    selectDenim() {
+        return cy.get('._3TqU78D')
     }
-    selectGoingout()
-    {
+    selectGoingout() {
         return cy.get('.feature__link ')
     }
 }
