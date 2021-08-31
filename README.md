@@ -21,6 +21,6 @@ Video of execution   : 1. https://www.awesomescreenshot.com/video/5048908?key=18
 
  Issues indentifed in the test : https://github.com/titus-joseph/cypressTest/issues/1
  
- Presentaion document for the test can be found here :https://1drv.ms/u/s!AresRhVEbwpUhhYTHGHX21oAXZ5W?e=x7HtbN
+ Presentaion document for the test can be found here :https://1drv.ms/p/s!AresRhVEbwpUhh7_EaRDOUTOzrJn?e=E8cFyw
  
 
