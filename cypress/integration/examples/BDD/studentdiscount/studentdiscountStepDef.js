@@ -52,7 +52,7 @@ Then('I Select Shop women and validate women shopping page url',function(){
 }) 
 Then('I Search for Denim ,select items and add to cart',function(){
    // womenProduct.selectWomenshopping().click()
-    womenProduct.searchforitem().type('Denim')
+    womenProduct.searchforitem().scrollIntoView().type('Denim')
     womenProduct.buttonSearch().click()
     womenProduct.firstitem_1().eq(0).click()
 
