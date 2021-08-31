@@ -10,10 +10,10 @@ This is a Cucumber Cypress Framework using Page Object design  Created for Testi
 6. Once installation completed, please run the  command the execute the test **```npx cypress run --spec cypress\integration\examples\BDD\*.feature --headed --browser chrome```** (to execute all the feature files in the project, this can be used for CI/CD integration).
  if we want to execute test based on tag **```npx cypress-tags run -e TAGS="@Regression" --headed --browser chrome```**
 7. once the execution is finished , please execute this command too **```node .\cucumber-html-report.js```** ( This is to  generate the Cucumber html report , which will be  available in  CypressAutomation/reports/cucumber-htmlreport.html/index.html) 
+ 
+Video of execution   :https://www.awesomescreenshot.com/video/5048908?key=18cc0f8ad61513b1270039405acd6ebe
+                     https://www.awesomescreenshot.com/video/5035427?key=a2a4d6d5e6554c97c22e5f4458962b95
 
  Issues indentifed in the test : https://github.com/titus-joseph/cypressTest/issues/1
- 
- Video of execution :https://www.awesomescreenshot.com/video/5035427?key=a2a4d6d5e6554c97c22e5f4458962b95
-                     https://www.awesomescreenshot.com/video/5036515?key=02ae10321451cb7328c404c3405239f3 
  
  Presentaion document for the test can be found here :https://1drv.ms/u/s!AresRhVEbwpUhhYTHGHX21oAXZ5W?e=x7HtbN
