@@ -1,6 +1,7 @@
 # AsosStudentDiscount
-This is a Cucumber Cypress Framework Created for ASOS Student discount Feature Test 
-Steps to Run the test 
+This is a Cucumber Cypress Framework Created for ASOS Student discount Feature Test
+
+##Steps to Run the test 
 1. Install nstall node and nmp ( https://docs.npmjs.com/downloading-and-installing-node-js-and-npm )
 2. verify the node is installed by executing  'node' in the command prompt and it should display "Welcome to Node.js v14.15.5."
 3. Clone this git repository 
