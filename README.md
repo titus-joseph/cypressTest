@@ -14,8 +14,7 @@ This is a Cucumber Cypress Framework using Page Object design  Created for Testi
 
  
 Video of execution   : 1. https://www.awesomescreenshot.com/video/5048908?key=18cc0f8ad61513b1270039405acd6ebe
-
-                       2. https://www.awesomescreenshot.com/video/5035427?key=a2a4d6d5e6554c97c22e5f4458962b95
+ 2. https://www.awesomescreenshot.com/video/5035427?key=a2a4d6d5e6554c97c22e5f4458962b95
 
 ![Report](https://user-images.githubusercontent.com/57806739/131534182-a76a164f-9cb2-4016-b0fa-c4fd169da1e7.png)
 
