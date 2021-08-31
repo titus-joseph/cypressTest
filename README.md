@@ -2,7 +2,7 @@
 This is a Cucumber Cypress Framework Created for ASOS Student discount Feature Test 
 Steps to Run the test 
 1. Install node  in your machine from   https://nodejs.org/en/   
-2. verify the node is installed by executing  'node' in the command prompt 
+2. verify the node is installed by executing  'node' in the command prompt and it should display "Welcome to Node.js v14.15.5."
 3. Clone this git repository 
 4. Open the command prompt in the same folder where the git repository is saved
 5. In the command prompt execute this command  " npm install cypress " 
